@@ -1,0 +1,3 @@
+c3r3s3% /usr/bin/klist -l
+    Name             Cache name                                 Expires
+* yim@42SEOUL.KR   API:A4E1C22C-C9DC-49F9-9D36-04890F819B1C   Jul  2 07:23:14 2020
