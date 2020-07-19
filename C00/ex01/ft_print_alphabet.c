@@ -3,21 +3,23 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_alphabet.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yim <marvin@42.fr>                         +#+  +:+       +#+        */
+/*   By: yim <yim@student.42seoul.kr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/09 16:34:25 by yim               #+#    #+#             */
-/*   Updated: 2020/07/12 18:48:53 by yim              ###   ########.fr       */
+/*   Created: 2020/07/14 21:26:41 by yim               #+#    #+#             */
+/*   Updated: 2020/07/14 21:32:43 by yim              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<unistd.h>
+#include <unistd.h>
 
-void ft_print_alphabet(void)
+void	ft_print_alphabet(void)
 {
-	char c='a';
-	while(c<='z')
-		{
-		write(1,&c,1);
+	char c;
+
+	c = 'a';
+	while (c <= 'z')
+	{
+		write(1, &c, 1);
 		c++;
-		}
+	}
 }

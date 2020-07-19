@@ -3,57 +3,79 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yim <marvin@42.fr>                         +#+  +:+       +#+        */
+/*   By: yim <yim@student.42seoul.kr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/12 22:23:41 by yim               #+#    #+#             */
-/*   Updated: 2020/07/13 17:21:03 by yim              ###   ########.fr       */
+/*   Created: 2020/07/14 22:35:09 by yim               #+#    #+#             */
+/*   Updated: 2020/07/19 18:18:20 by yim              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<unistd.h>
-#include<math.h>
+#include <unistd.h>
 
-void print(int j,int nb)
+void	square(int *n)
 {
-	int m;
-	char mm;
-	while(j>=0)
+	int out;
+
+	out = *n;
+	(*n) = 10;
+	if (out == 1)
+		(*n) = 10;
+	while (1 < out)
 	{
-		if(nb<10)
-		{
-			mm=nb%10+48;
-			write(1,&mm,1);
-			return;
-		}
-		m = nb/pow(10,j);
-		mm = m+48;
-		write(1,&mm,1);
-		nb=nb-m*pow(10,j);
-		j--;
+		(*n) *= 10;
+		out--;
 	}
 }
 
-void ft_putnbr(int nb)
+void	print(int c, int nb)
 {
-	char ma='-';
-	char zero='0';
-	int a,mb;
-	a=-1;
-	if(nb==0)
+	int m;
+	int n;
+	char mm;
+
+	while (c >= 0)
 	{
-		write(1,&zero,1);
-		return;
+		n = c;
+		if (nb < 10)
+		{
+			mm = nb % 10 + 48;
+			write(1, &mm, 1);
+			return ;
+		}
+		square(&n);
+		m = nb / n;
+		mm = m + 48;
+		write(1, &mm, 1);
+		nb = nb - m * n;
+		c--;
 	}
-	else if (nb<0)
+}
+
+void	ft_putnbr(int nb)
+{
+	char minus;
+	char zero;
+	int c;
+	int n;
+
+	c = -1;
+	minus = '-';
+	zero = '0';
+	if (nb == 0)
 	{
-		write(1,&ma,1);
+		write(1, &zero, 1);
+		return ;
+	}
+	if (nb < 0)
+	{
+		write(1, &minus, 1);
 		nb = -nb;
 	}
-	mb=nb;
-	while(mb>0)
+	n = nb;
+	while (n > 0)
 	{
-		a++;
-		mb/=10;
+		c++;
+		n /= 10;
 	}
-	print(a,nb);
+	print(c, nb);
 }

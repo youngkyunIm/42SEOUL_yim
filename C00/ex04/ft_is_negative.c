@@ -3,21 +3,21 @@
 /*                                                        :::      ::::::::   */
 /*   ft_is_negative.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yim <marvin@42.fr>                         +#+  +:+       +#+        */
+/*   By: yim <yim@student.42seoul.kr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/09 19:15:08 by yim               #+#    #+#             */
-/*   Updated: 2020/07/13 17:25:13 by yim              ###   ########.fr       */
+/*   Created: 2020/07/14 21:45:01 by yim               #+#    #+#             */
+/*   Updated: 2020/07/15 11:40:34 by yim              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include<unistd.h>
 
-void ft_is_negative(int n)
+#include <unistd.h>
+
+void	ft_is_negative(int n)
 {
-	if(n>=0)
+	if (n >= 0)
 	{
-		write(1,"P",1);
+		write(1, "P", 1);
 	}
 	else
-		write(1,"N",1);
+		write(1, "N", 1);
 }
-

@@ -3,21 +3,23 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_numbers.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yim <marvin@42.fr>                         +#+  +:+       +#+        */
+/*   By: yim <yim@student.42seoul.kr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/09 18:37:33 by yim               #+#    #+#             */
-/*   Updated: 2020/07/12 18:51:11 by yim              ###   ########.fr       */
+/*   Created: 2020/07/14 21:42:56 by yim               #+#    #+#             */
+/*   Updated: 2020/07/14 21:44:35 by yim              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<unistd.h>
+#include <unistd.h>
 
-void ft_print_numbers(void)
+void	ft_print_numbers(void)
 {
-	char c='0';
-	while(c<='9')
-		{
-		write(1,&c,1);
+	char c;
+
+	c = '0';
+	while (c <= '9')
+	{
+		write(1, &c, 1);
 		c++;
-		}
+	}
 }

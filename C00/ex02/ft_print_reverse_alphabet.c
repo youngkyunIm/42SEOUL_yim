@@ -3,21 +3,23 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_reverse_alphabet.c                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yim <marvin@42.fr>                         +#+  +:+       +#+        */
+/*   By: yim <yim@student.42seoul.kr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/09 18:17:19 by yim               #+#    #+#             */
-/*   Updated: 2020/07/12 18:50:02 by yim              ###   ########.fr       */
+/*   Created: 2020/07/14 21:34:52 by yim               #+#    #+#             */
+/*   Updated: 2020/07/14 21:42:14 by yim              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<unistd.h>
+#include <unistd.h>
 
-void ft_print_reverse_alphabet(void)
+void	ft_print_reverse_alphabet(void)
 {
-	char c='z';
-	while(c>='a')
-		{
-		write(1,&c,1);
+	char c;
+
+	c = 'z';
+	while (c >= 'a')
+	{
+		write(1, &c, 1);
 		c--;
-		}
+	}
 }

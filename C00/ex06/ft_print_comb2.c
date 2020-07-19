@@ -3,40 +3,43 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_comb2.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yim <marvin@42.fr>                         +#+  +:+       +#+        */
+/*   By: yim <yim@student.42seoul.kr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/12 22:23:24 by yim               #+#    #+#             */
-/*   Updated: 2020/07/13 17:23:22 by yim              ###   ########.fr       */
+/*   Created: 2020/07/14 22:33:05 by yim               #+#    #+#             */
+/*   Updated: 2020/07/16 15:51:34 by yim              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<unistd.h>
+#include <unistd.h>
 
-void print(int a)
+void	print(int a)
 {
-	char q = a/10 + 48;
-	char w = a%10 + 48;
-	write(1,&q,1);
-	write(1,&w,1);
+	char q;
+	char w;
+
+	q = a / 10 + 48;
+	w = a % 10 + 48;
+	write(1, &q, 1);
+	write(1, &w, 1);
 }
 
-void ft_print_comb2(void)
+void	ft_print_comb2(void)
 {
-	
-	int i=0;
-	int j=0;
-	char t = 48 + 8;
-	while(i<=98)
+	int i;
+	int j;
+
+	i = 0;
+	while (i <= 98)
 	{
-		j=i+1;
-		while(j<=99)
+		j = i + 1;
+		while (j <= 99)
 		{
 			print(i);
-			write(1," ",1);
+			write(1, " ", 1);
 			print(j);
-			if (i==98 && j==99)
-				return;
-			write(1,", ",2);
+			if (i == 98 && j == 99)
+				return ;
+			write(1, ", ", 2);
 			j++;
 		}
 		i++;
